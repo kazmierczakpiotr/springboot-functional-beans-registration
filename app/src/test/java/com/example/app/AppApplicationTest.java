@@ -15,5 +15,6 @@ class AppApplicationTest {
     void contextLoads() {
 
         assert null != context.getBean(Configuration.class);
+        assert null != context.getBean(Foo.class);
     }
 }
