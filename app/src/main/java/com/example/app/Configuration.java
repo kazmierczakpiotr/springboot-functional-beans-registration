@@ -9,7 +9,11 @@ public class Configuration implements ApplicationContextInitializer<GenericAppli
 
     @Override
     public void initialize(GenericApplicationContext context) {
-        context.registerBean(Foo.class, Foo::new);
-        context.registerBean(Bar.class, () -> new Bar(context.getBeanFactory().getBean(Foo.class)));
+
+        Foo foo = new Foo();
+        Bar bar = new Bar(foo);
+
+        context.registerBean(Foo.class, () -> foo);
+        context.registerBean(Bar.class, () -> bar);
     }
 }
