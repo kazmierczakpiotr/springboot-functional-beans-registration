@@ -4,8 +4,7 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.support.GenericApplicationContext;
 
 @org.springframework.context.annotation.Configuration
-public class Configuration implements ApplicationContextInitializer<GenericApplicationContext> {
-
+class Configuration implements ApplicationContextInitializer<GenericApplicationContext> {
 
     @Override
     public void initialize(GenericApplicationContext context) {
